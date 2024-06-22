@@ -1,0 +1,12 @@
+.discount-coupon__item{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.discount-coupon__item-description{
+  text-align: center;
+}

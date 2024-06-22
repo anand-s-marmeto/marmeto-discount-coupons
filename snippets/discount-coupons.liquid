@@ -1,0 +1,32 @@
+{% comment %} {% render 'discount-coupons' %} {% endcomment %}
+
+<link rel="stylesheet" href="{{ 'discount-coupon.css' |  asset_url }}">
+
+<marmeto-discount-coupons>
+  <div class="discount-coupon">
+    {% if product.metafields.custom.discount_coupons.value != blank %}
+      <div class="discount-coupon__wrapper">
+        {% for coupon in product.metafields.custom.discount_coupons.value %}
+          <div class="discount-coupon__item">
+            <div class="discount-coupon__item-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17.04" height="17.04" viewBox="0 0 17.04 17.04">
+                <g id="Group_2754" data-name="Group 2754" transform="translate(0 0)">
+                  <path id="Path_9775" data-name="Path 9775" d="M88.625,18.625a.822.822,0,0,0,0-1.165L85.13,13.965a.824.824,0,0,0-1.165,1.165l3.495,3.495A.822.822,0,0,0,88.625,18.625Z" transform="translate(-83.724 -13.724)" fill="#004c9d"></path>
+                  <path id="Path_9776" data-name="Path 9776" d="M144.475,66.753l-7.026-7.026a1.4,1.4,0,0,0-1.075-.412l-4.176.233,1.308,1.308a1.876,1.876,0,0,1-2.653,2.653L129.546,62.2l-.233,4.176a1.43,1.43,0,0,0,.412,1.075l7.026,7.026a1.4,1.4,0,0,0,1.989,0l5.735-5.735a1.4,1.4,0,0,0,0-1.989Zm-9.23,1.308a1.128,1.128,0,1,1,0-1.6A1.114,1.114,0,0,1,135.245,68.062Zm2.957,3.011a.543.543,0,0,1-.394.179.647.647,0,0,1-.717-.574l-.681-6.452a.649.649,0,0,1,1.29-.143l.681,6.452a.681.681,0,0,1-.179.538Zm2.921-2.76a1.128,1.128,0,1,1,0-1.6A1.147,1.147,0,0,1,141.124,68.313Z" transform="translate(-127.852 -57.855)" fill="#004c9d"></path>
+                </g>
+              </svg>
+            </div>
+            {% if coupon.discount_offer.value %}
+              <div class="discount-coupon__item-title">{{ coupon.discount_offer.value }}</div>
+            {% endif %}
+          </div>
+          {% if coupon.discount_description.value %}
+            <div class="discount-coupon__item-description">
+              {{ coupon.discount_description.value }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</marmeto-discount-coupons>

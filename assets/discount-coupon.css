@@ -1,4 +1,4 @@
-.discount-coupon__item{
+.marmeto-discount-coupon__item{
   display: flex;
   align-items: center;
   gap: 15px;
@@ -7,6 +7,6 @@
   justify-content: center;
 }
 
-.discount-coupon__item-description{
+.marmeto-discount-coupon__item-description{
   text-align: center;
 }

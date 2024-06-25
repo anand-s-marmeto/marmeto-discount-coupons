@@ -3,12 +3,12 @@
 <link rel="stylesheet" href="{{ 'discount-coupon.css' |  asset_url }}">
 
 <marmeto-discount-coupons>
-  <div class="discount-coupon">
+  <div class="marmeto-discount-coupons">
     {% if product.metafields.custom.discount_coupons.value != blank %}
-      <div class="discount-coupon__wrapper">
+      <div class="marmeto-discount-coupons__wrapper">
         {% for coupon in product.metafields.custom.discount_coupons.value %}
-          <div class="discount-coupon__item">
-            <div class="discount-coupon__item-svg">
+          <div class="marmeto-discount-coupons__item">
+            <div class="marmeto-discount-coupons__item-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="17.04" height="17.04" viewBox="0 0 17.04 17.04">
                 <g id="Group_2754" data-name="Group 2754" transform="translate(0 0)">
                   <path id="Path_9775" data-name="Path 9775" d="M88.625,18.625a.822.822,0,0,0,0-1.165L85.13,13.965a.824.824,0,0,0-1.165,1.165l3.495,3.495A.822.822,0,0,0,88.625,18.625Z" transform="translate(-83.724 -13.724)" fill="#004c9d"></path>
@@ -17,11 +17,11 @@
               </svg>
             </div>
             {% if coupon.discount_offer.value %}
-              <div class="discount-coupon__item-title">{{ coupon.discount_offer.value }}</div>
+              <div class="marmeto-discount-coupons__item-title">{{ coupon.discount_offer.value }}</div>
             {% endif %}
           </div>
           {% if coupon.discount_description.value %}
-            <div class="discount-coupon__item-description">
+            <div class="marmeto-discount-coupons__item-description">
               {{ coupon.discount_description.value }}
             </div>
           {% endif %}
